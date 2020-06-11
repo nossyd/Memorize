@@ -32,7 +32,14 @@ class EmojiMemoryGame: ObservableObject {
     // MARK: - Intent(s)
     
     // intents have to be non-private
+    // ex. choose = draft
+    // choose a card
     func choose(card: MemoryGame<String>.Card) {
         model.choose(card: card)
+    }
+    
+    // start a new game
+    func resetGame() {
+        model = EmojiMemoryGame.createMemoryGame()
     }
 }
